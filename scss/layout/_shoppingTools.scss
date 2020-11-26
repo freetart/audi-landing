@@ -1,0 +1,58 @@
+.shopping-tools {
+  @include sectionSpacing();
+  @include flexLayout();
+
+  h2 {
+    @include headingStyles();
+    font-size: size(xl) + 4rem;
+    margin-bottom: 2rem;
+    font-family: "Oswald", sans-serif;
+
+    @include response(sm) {
+      font-size: size(xl) + 2rem;
+      margin-top: 20rem;
+    }
+
+    @include response(xxs) {
+      font-size: size(xl) + 1rem;
+      margin-top: 35rem;
+    }
+  }
+
+  .tools-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5rem;
+
+    @include response(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include response(xs) {
+      grid-template-columns: 1fr;
+    }
+
+    .icon {
+      text-align: center;
+      color: color(darkGray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: color(blackColor);
+      }
+    }
+
+    .icon i {
+      font-size: size(xl) + 2rem;
+      margin-bottom: 1rem;
+
+      @include response(sm) {
+        font-size: size(xl) + 1rem;
+      }
+    }
+
+    .icon p {
+      font-size: size(md);
+    }
+  }
+}

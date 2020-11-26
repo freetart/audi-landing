@@ -1,0 +1,39 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: color(lightGray);
+  opacity: 0.9;
+
+  .navbar-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include response(md) {
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 10rem;
+      height: auto;
+    }
+
+    .nav-link {
+      color: color(mainTextColor);
+      font-size: size(sm);
+      margin-right: 2rem;
+      transition: color 0.3s;
+      font-weight: 700;
+
+      @include response(md) {
+        display: none;
+      }
+
+      &:hover {
+        color: color(blackColor);
+        border-bottom: 0.2rem solid color(darkGray);
+      }
+    }
+  }
+}

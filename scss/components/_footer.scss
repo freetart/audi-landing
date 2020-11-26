@@ -1,0 +1,94 @@
+.footer {
+  @include sectionSpacing();
+  background-color: color(lightGray);
+
+  .footer-upper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include response(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include response(sm) {
+      grid-template-columns: 1fr;
+    }
+
+    h4 {
+      @include headingStyles();
+      font-size: size(md);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-size: size(xs);
+      line-height: 2.5;
+      color: color(darkGray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: color(blackColor);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid color(darkGray);
+
+    @include response(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    a {
+      font-size: size(xs);
+      color: color(darkGray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: color(blackColor);
+      }
+    }
+
+    i {
+      font-size: size(lg) + 1rem;
+      margin: 2.5rem 0;
+
+      @include response(sm) {
+        font-size: size(lg);
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include flexLayout();
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 4rem;
+
+    @include response(sm) {
+      flex-wrap: wrap;
+    }
+
+    a {
+      font-size: size(lg);
+      margin-right: 2rem;
+      color: color(darkGray);
+      transition: color 0.3s;
+
+      &:hover {
+        color: color(blackColor);
+      }
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: size(xs);
+    }
+  }
+}

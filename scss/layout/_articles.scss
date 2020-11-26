@@ -1,0 +1,65 @@
+.articles {
+  @include sectionSpacing();
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  height: 70vh;
+
+  @include response(lg) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @include response(md) {
+    grid-template-columns: 1fr;
+  }
+
+  @include response(sm) {
+    height: 60vh;
+  }
+
+  .article {
+    @include headingStyles();
+    @include flexLayout();
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: "Oswald", sans-serif;
+
+    @include response(md) {
+      padding: 2rem 0;
+    }
+
+    .article-content-upper {
+      padding: 2rem;
+    }
+
+    h3 {
+      font-size: size(xl) + 1rem;
+      color: color(lightGray);
+      word-wrap: break-word;
+
+      @include response(xl) {
+        font-size: size(xl);
+      }
+    }
+
+    p {
+      font-size: size(md);
+      color: color(lightGray);
+      width: 70%;
+
+      @include response(xl) {
+        font-size: size(sm);
+      }
+    }
+  }
+
+  .article-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/bg2.jpg") center/cover no-repeat;
+  }
+
+  .article-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/images/bg3.jpg") center/cover no-repeat;
+  }
+}

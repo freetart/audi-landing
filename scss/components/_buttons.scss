@@ -1,0 +1,86 @@
+.button-group {
+  display: flex;
+
+  .btn {
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 20rem;
+    margin-right: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Oswald", sans-serif;
+    font-size: size(md);
+
+    &:hover {
+      background-color: color(blackColor);
+      color: color(lightGray);
+    }
+
+    @include response(xl) {
+      width: 15rem;
+      padding: 1rem;
+    }
+
+    @include response(xxs) {
+      width: 12rem;
+      padding: 0.5rem;
+      font-size: size(sm);
+    }
+  }
+
+  .btn2 {
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 20rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    color: color(lightGray);
+    border: 1px solid color(lightGray);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Oswald", sans-serif;
+    font-size: size(md);
+
+    &:hover {
+      background-color: color(lightGray);
+      color: color(blackColor);
+    }
+
+    @include response(xl) {
+      width: 15rem;
+      padding: 1rem;
+    }
+
+    @include response(xxs) {
+      width: 12rem;
+      padding: 0.5rem;
+      font-size: size(sm);
+    }
+  }
+
+  .btn3 {
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 20rem;
+    background-color: color(blackColor);
+    color: color(lightGray);
+    border: 1px solid color(lightGray);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Oswald", sans-serif;
+    font-size: size(md);
+
+    &:hover {
+      background-color: lighten(color(blackColor), 30%);
+      color: color(lightGray);
+    }
+
+    @include response(xl) {
+      width: 15rem;
+      padding: 1rem;
+    }
+
+    @include response(xxs) {
+      width: 12rem;
+      padding: 0.5rem;
+      font-size: size(sm);
+    }
+  }
+}

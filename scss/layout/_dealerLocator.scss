@@ -1,0 +1,61 @@
+.dealer-locator-section {
+  @include sectionSpacing();
+  background-color: color(lightGray);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  @include response(lg) {
+    grid-template-columns: 1fr;
+  }
+
+  .dealer-locator-left {
+    @include flexLayout();
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+
+    h3 {
+      font-size: size(xl) + 2rem;
+
+      @include response(xs) {
+        font-size: size(xl);
+      }
+    }
+
+    p {
+      font-size: size(xl);
+      width: 70%;
+      margin: 2rem 0;
+
+      @include response(xs) {
+        font-size: size(lg);
+      }
+    }
+
+    input {
+      width: 50%;
+      padding: 1rem;
+      outline: none;
+      border: none;
+      border-bottom: 0.2rem solid color(blackColor);
+      background-color: color(lightGray);
+      margin-bottom: 2rem;
+
+      @include response(sm) {
+        width: 70%;
+      }
+    }
+  }
+
+  .dealer-locator-right {
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+
+      @include response(xxs) {
+        display: none;
+      }
+    }
+  }
+}
